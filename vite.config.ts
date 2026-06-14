@@ -4,7 +4,11 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { traeBadgePlugin } from 'vite-plugin-trae-solo-badge';
 
 // https://vite.dev/config/
+// GitHub Pages 部署注意：如果部署到 https://<user>.github.io/<repo>/
+// 请把 base 设置为 "/<repo>/"（前后都要有斜杠）。
+// 如果部署到 <user>.github.io 根站点，base 保持 "/"。
 export default defineConfig({
+  base: '/',
   build: {
     sourcemap: 'hidden',
   },
