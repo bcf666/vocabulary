@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lora', 'Noto Serif SC', ui-serif, Georgia, serif;
+  font-feature-settings: "ss01", "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', 'Noto Serif SC', ui-serif, Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.font-display { font-family: 'Fraunces', ui-serif, Georgia, serif; }
+.font-ipa { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.font-cn { font-family: 'Noto Serif SC', ui-serif, Georgia, serif; }
+
+@layer components {
+  .paper-card {
+    @apply bg-white dark:bg-night-card border border-paper-200/70 dark:border-white/10
+           rounded-[14px] shadow-paper;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-paper-200 dark:bg-white/10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-[10px] px-4 py-2
+           text-[15px] font-medium transition-colors duration-150
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-moss/40
+           disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-moss text-white hover:bg-moss-600 active:bg-moss-700;
+  }
+
+  .btn-ghost {
+    @apply btn text-ink dark:text-night-text hover:bg-paper-200/70 dark:hover:bg-white/5;
+  }
+
+  .btn-outline {
+    @apply btn border border-paper-300/80 dark:border-white/15 text-ink dark:text-night-text
+           hover:border-moss hover:text-moss dark:hover:text-ochre;
+  }
+
+  .field {
+    @apply w-full rounded-[10px] border border-paper-300/80 dark:border-white/15
+           bg-paper-50/60 dark:bg-white/5 px-4 py-2.5 text-ink dark:text-night-text
+           placeholder:text-ink-mute focus:outline-none
+           focus-visible:ring-2 focus-visible:ring-moss/40 focus:border-moss;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-paper-300/70
+           dark:border-white/15 bg-paper-50/70 dark:bg-white/5 px-2.5 py-1 text-xs
+           text-ink-soft dark:text-night-text/80;
+  }
+
+  .section-title {
+    @apply font-display text-xl sm:text-2xl text-ink dark:text-night-text tracking-tight;
+  }
+
+  .muted {
+    @apply text-ink-mute dark:text-night-text/60;
+  }
+}
+
+/* subtle paper grain (CSS only, no image) */
+.paper-grain {
+  background-image:
+    radial-gradient(rgba(26,26,26,0.025) 1px, transparent 1px),
+    radial-gradient(rgba(26,26,26,0.018) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+}
+
+/* scrollbar polish */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb {
+  background: rgba(26,26,26,0.18);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-track { background: transparent; }
+.dark *::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); }
+
+/* 3D flip helpers */
+.perspective-1200 { perspective: 1200px; }
+.preserve-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.rotate-y-180 { transform: rotateY(180deg); }
+
+/* stagger animation offsets (applied via style={{ animationDelay }}) */

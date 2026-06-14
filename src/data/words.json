@@ -1,0 +1,736 @@
+[
+  {
+    "id": "w0001",
+    "word": "sophisticated",
+    "phonetic": "/səˈfɪstɪkeɪtɪd/",
+    "partOfSpeech": "adj.",
+    "meaning": "复杂精妙的；老练的",
+    "enDef": "having or showing a lot of experience of the world and the ability to understand complicated things",
+    "synonyms": ["complex", "refined", "worldly"],
+    "roots": [
+      { "root": "soph", "meaning": "智慧 / 诡辩", "relatedWords": ["philosophy", "sophistry"] }
+    ],
+    "example": "The system uses a sophisticated algorithm to rank candidates.",
+    "exampleCn": "该系统使用一套复杂精妙的算法为候选人排序。",
+    "tags": ["CET-6", "学术"]
+  },
+  {
+    "id": "w0002",
+    "word": "conjecture",
+    "phonetic": "/kənˈdʒektʃər/",
+    "partOfSpeech": "n./v.",
+    "meaning": "推测；猜想",
+    "enDef": "an opinion or conclusion formed on the basis of incomplete information",
+    "synonyms": ["guess", "supposition", "surmise"],
+    "roots": [
+      { "root": "ject", "meaning": "投掷", "relatedWords": ["inject", "reject", "project"] },
+      { "root": "con-", "meaning": "共同 / 一起", "relatedWords": ["connect", "concur"] }
+    ],
+    "example": "What she said is mere conjecture, not evidence.",
+    "exampleCn": "她所说的只是推测，而非证据。",
+    "tags": ["GRE", "学术"]
+  },
+  {
+    "id": "w0003",
+    "word": "meticulous",
+    "phonetic": "/məˈtɪkjʊləs/",
+    "partOfSpeech": "adj.",
+    "meaning": "一丝不苟的；细致的",
+    "enDef": "showing great attention to detail; very careful and precise",
+    "synonyms": ["careful", "precise", "thorough"],
+    "roots": [
+      { "root": "metic", "meaning": "恐惧 / 小心", "relatedWords": [] }
+    ],
+    "example": "He was meticulous in checking every reference.",
+    "exampleCn": "他在核对每条参考文献时一丝不苟。",
+    "tags": ["CET-6", "写作"]
+  },
+  {
+    "id": "w0004",
+    "word": "discern",
+    "phonetic": "/dɪˈsɜːn/",
+    "partOfSpeech": "v.",
+    "meaning": "察觉；分辨；识别",
+    "enDef": "recognize or find out something, especially with difficulty",
+    "synonyms": ["perceive", "detect", "distinguish"],
+    "roots": [
+      { "root": "cern", "meaning": "区分 / 筛", "relatedWords": ["concern", "discernment"] }
+    ],
+    "example": "We could discern a faint light at the end of the corridor.",
+    "exampleCn": "我们能分辨出走廊尽头有一丝微弱的光。",
+    "tags": ["CET-6"]
+  },
+  {
+    "id": "w0005",
+    "word": "ambiguous",
+    "phonetic": "/æmˈbɪɡjʊəs/",
+    "partOfSpeech": "adj.",
+    "meaning": "模棱两可的；含糊的",
+    "enDef": "open to more than one interpretation; not clear in meaning",
+    "synonyms": ["unclear", "vague", "equivocal"],
+    "roots": [
+      { "root": "ambi-", "meaning": "两边", "relatedWords": ["ambivalent", "ambidextrous"] }
+    ],
+    "example": "The contract contained several ambiguous clauses.",
+    "exampleCn": "合同中有几处条款含糊不清。",
+    "tags": ["CET-6", "法学"]
+  },
+  {
+    "id": "w0006",
+    "word": "paradigm",
+    "phonetic": "/ˈpærədaɪm/",
+    "partOfSpeech": "n.",
+    "meaning": "范式；典范；思维框架",
+    "enDef": "a typical example or pattern of something; a model",
+    "synonyms": ["model", "framework", "archetype"],
+    "roots": [
+      { "root": "para-", "meaning": "在旁 / 并列", "relatedWords": ["parallel", "paradox"] }
+    ],
+    "example": "The study introduced a new paradigm for understanding memory.",
+    "exampleCn": "该研究提出了理解记忆的新范式。",
+    "tags": ["学术", "GRE"]
+  },
+  {
+    "id": "w0007",
+    "word": "resilient",
+    "phonetic": "/rɪˈzɪliənt/",
+    "partOfSpeech": "adj.",
+    "meaning": "有韧性的；能恢复的",
+    "enDef": "able to recover quickly from difficult conditions",
+    "synonyms": ["tough", "elastic", "buoyant"],
+    "roots": [
+      { "root": "sili-", "meaning": "跳 / 跃", "relatedWords": ["salient"] }
+    ],
+    "example": "Children can be remarkably resilient after hardship.",
+    "exampleCn": "儿童在经历困境后往往能展现惊人的韧性。",
+    "tags": ["CET-6", "心理学"]
+  },
+  {
+    "id": "w0008",
+    "word": "prelude",
+    "phonetic": "/ˈpreljuːd/",
+    "partOfSpeech": "n.",
+    "meaning": "前奏；序幕",
+    "enDef": "an action or event that happens before another more important one and acts as an introduction",
+    "synonyms": ["preface", "overture", "introduction"],
+    "roots": [
+      { "root": "pre-", "meaning": "在……之前", "relatedWords": ["preview", "predict"] },
+      { "root": "lud", "meaning": "玩 / 演", "relatedWords": ["elude", "delude"] }
+    ],
+    "example": "The conference was merely a prelude to larger reforms.",
+    "exampleCn": "这次会议不过是更大规模改革的前奏。",
+    "tags": ["写作"]
+  },
+  {
+    "id": "w0009",
+    "word": "impeccable",
+    "phonetic": "/ɪmˈpekəbl/",
+    "partOfSpeech": "adj.",
+    "meaning": "无可挑剔的；完美的",
+    "enDef": "in accordance with the highest standards; faultless",
+    "synonyms": ["flawless", "perfect", "exemplary"],
+    "roots": [
+      { "root": "pecc", "meaning": "过失", "relatedWords": ["peccadillo"] }
+    ],
+    "example": "Her attention to detail was impeccable.",
+    "exampleCn": "她对细节的关注无可挑剔。",
+    "tags": ["GRE", "写作"]
+  },
+  {
+    "id": "w0010",
+    "word": "ubiquitous",
+    "phonetic": "/juːˈbɪkwɪtəs/",
+    "partOfSpeech": "adj.",
+    "meaning": "无处不在的；普遍存在的",
+    "enDef": "present, appearing, or found everywhere",
+    "synonyms": ["omnipresent", "universal", "pervasive"],
+    "roots": [
+      { "root": "ubi", "meaning": "何处", "relatedWords": ["ubiquity"] }
+    ],
+    "example": "Smartphones have become ubiquitous in everyday life.",
+    "exampleCn": "智能手机在日常生活中已无处不在。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0011",
+    "word": "ephemeral",
+    "phonetic": "/ɪˈfemərəl/",
+    "partOfSpeech": "adj.",
+    "meaning": "短暂的；瞬息的",
+    "enDef": "lasting for a very short time",
+    "synonyms": ["fleeting", "transient", "momentary"],
+    "roots": [
+      { "root": "hemer-", "meaning": "日", "relatedWords": [] }
+    ],
+    "example": "Fame in the digital age can be ephemeral.",
+    "exampleCn": "数字时代的名声可能转瞬即逝。",
+    "tags": ["GRE", "写作"]
+  },
+  {
+    "id": "w0012",
+    "word": "vicarious",
+    "phonetic": "/vɪˈkeəriəs/",
+    "partOfSpeech": "adj.",
+    "meaning": "替代的；间接感受的",
+    "enDef": "experienced in the imagination through the feelings or actions of another person",
+    "synonyms": ["indirect", "second-hand"],
+    "roots": [
+      { "root": "vic-", "meaning": "代替", "relatedWords": ["vicar"] }
+    ],
+    "example": "She took vicarious pleasure in her daughter's success.",
+    "exampleCn": "她通过女儿的成功获得间接的满足。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0013",
+    "word": "perennial",
+    "phonetic": "/pəˈreniəl/",
+    "partOfSpeech": "adj./n.",
+    "meaning": "多年生的；长期的",
+    "enDef": "lasting or existing for a long or apparently infinite time",
+    "synonyms": ["evergreen", "enduring", "recurrent"],
+    "roots": [
+      { "root": "per-", "meaning": "贯穿", "relatedWords": ["perpetual"] },
+      { "root": "ann", "meaning": "年", "relatedWords": ["annual"] }
+    ],
+    "example": "The novel has become a perennial favorite.",
+    "exampleCn": "这部小说成为一本常年畅销的经典。",
+    "tags": ["CET-6"]
+  },
+  {
+    "id": "w0014",
+    "word": "consolidate",
+    "phonetic": "/kənˈsɒlɪdeɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "巩固；合并",
+    "enDef": "make something physically stronger or more solid; combine into a single more effective whole",
+    "synonyms": ["strengthen", "merge", "unify"],
+    "roots": [
+      { "root": "solid", "meaning": "固体", "relatedWords": ["solidarity"] }
+    ],
+    "example": "They consolidated their gains before moving forward.",
+    "exampleCn": "他们在推进之前先巩固了既得成果。",
+    "tags": ["CET-6", "商务"]
+  },
+  {
+    "id": "w0015",
+    "word": "nuance",
+    "phonetic": "/ˈnjuːɑːns/",
+    "partOfSpeech": "n.",
+    "meaning": "细微差别；微妙之处",
+    "enDef": "a subtle difference in or shade of meaning, expression, or sound",
+    "synonyms": ["shade", "subtlety", "distinction"],
+    "example": "She captured every nuance of the argument.",
+    "exampleCn": "她捕捉到了该论点的每一个细微差别。",
+    "tags": ["GRE", "写作"]
+  },
+  {
+    "id": "w0016",
+    "word": "reverberate",
+    "phonetic": "/rɪˈvɜːbəreɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "回响；回荡；产生广泛影响",
+    "enDef": "be repeated several times as an echo; have continuing serious effects",
+    "synonyms": ["echo", "resound", "ring"],
+    "roots": [
+      { "root": "verb", "meaning": "震动", "relatedWords": ["vibrate"] }
+    ],
+    "example": "The scandal reverberated through the entire industry.",
+    "exampleCn": "这一丑闻在整个行业中产生了广泛回响。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0017",
+    "word": "eloquent",
+    "phonetic": "/ˈeləkwənt/",
+    "partOfSpeech": "adj.",
+    "meaning": "雄辩的；有说服力的",
+    "enDef": "fluent or persuasive in speaking or writing",
+    "synonyms": ["articulate", "persuasive", "fluent"],
+    "roots": [
+      { "root": "loqu", "meaning": "说", "relatedWords": ["colloquial", "loquacious"] }
+    ],
+    "example": "Her eloquent defense of the thesis impressed the jury.",
+    "exampleCn": "她对论文的雄辩辩护令评审印象深刻。",
+    "tags": ["CET-6"]
+  },
+  {
+    "id": "w0018",
+    "word": "tenacity",
+    "phonetic": "/tɪˈnæsəti/",
+    "partOfSpeech": "n.",
+    "meaning": "韧性；坚持",
+    "enDef": "the quality or fact of being very determined; persistence",
+    "synonyms": ["persistence", "determination", "perseverance"],
+    "roots": [
+      { "root": "ten-", "meaning": "握 / 持", "relatedWords": ["tenure"] }
+    ],
+    "example": "The job requires tenacity and careful reading.",
+    "exampleCn": "这份工作需要坚持和仔细的阅读。",
+    "tags": ["写作"]
+  },
+  {
+    "id": "w0019",
+    "word": "permeate",
+    "phonetic": "/ˈpɜːmieɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "渗透；弥漫",
+    "enDef": "spread throughout something; diffuse",
+    "synonyms": ["pervade", "diffuse", "spread"],
+    "roots": [
+      { "root": "me", "meaning": "通过", "relatedWords": ["permeable"] }
+    ],
+    "example": "A sense of calm permeated the room.",
+    "exampleCn": "一种平静的感觉弥漫在房间里。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0020",
+    "word": "benevolent",
+    "phonetic": "/bəˈnevələnt/",
+    "partOfSpeech": "adj.",
+    "meaning": "仁慈的；善意的",
+    "enDef": "well meaning and kindly",
+    "synonyms": ["kind", "charitable", "compassionate"],
+    "roots": [
+      { "root": "bene-", "meaning": "善", "relatedWords": ["benefit"] },
+      { "root": "vol-", "meaning": "意愿", "relatedWords": ["volunteer"] }
+    ],
+    "example": "A benevolent smile softened her reply.",
+    "exampleCn": "一个善意的微笑柔化了她的回应。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0021",
+    "word": "cognizant",
+    "phonetic": "/ˈkɒɡnɪzənt/",
+    "partOfSpeech": "adj.",
+    "meaning": "认识到的；意识到的",
+    "enDef": "having knowledge or awareness",
+    "synonyms": ["aware", "conscious", "mindful"],
+    "roots": [
+      { "root": "cogn-", "meaning": "知", "relatedWords": ["cognitive", "recognize"] }
+    ],
+    "example": "The team was cognizant of the risks involved.",
+    "exampleCn": "团队认识到所涉及的风险。",
+    "tags": ["GRE", "学术"]
+  },
+  {
+    "id": "w0022",
+    "word": "circumscribe",
+    "phonetic": "/ˈsɜːkəmskraɪb/",
+    "partOfSpeech": "v.",
+    "meaning": "限制；约束",
+    "enDef": "restrict something within limits; draw a figure around another, touching it but not cutting it",
+    "synonyms": ["restrict", "limit", "constrain"],
+    "roots": [
+      { "root": "circum-", "meaning": "环绕", "relatedWords": ["circumstance"] },
+      { "root": "scrib/script", "meaning": "写", "relatedWords": ["describe", "script"] }
+    ],
+    "example": "The rules circumscribe the scope of the committee.",
+    "exampleCn": "规则限制了委员会的职权范围。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0023",
+    "word": "proliferate",
+    "phonetic": "/prəˈlɪfəreɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "激增；大量繁殖",
+    "enDef": "increase rapidly in number; multiply",
+    "synonyms": ["multiply", "grow", "spread"],
+    "roots": [
+      { "root": "prol-", "meaning": "后代", "relatedWords": ["prolific"] }
+    ],
+    "example": "Start-ups proliferated in the early 2000s.",
+    "exampleCn": "初创企业在 2000 年代初大量涌现。",
+    "tags": ["CET-6", "商务"]
+  },
+  {
+    "id": "w0024",
+    "word": "venerate",
+    "phonetic": "/ˈvenəreɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "崇敬；敬重",
+    "enDef": "regard with great respect; revere",
+    "synonyms": ["revere", "respect", "honor"],
+    "roots": [
+      { "root": "ven-", "meaning": "敬重", "relatedWords": ["venus"] }
+    ],
+    "example": "The old professor was venerated by generations of students.",
+    "exampleCn": "这位老教授受到一代又一代学生的崇敬。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0025",
+    "word": "ameliorate",
+    "phonetic": "/əˈmiːliəreɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "改善；改进",
+    "enDef": "make something better or more satisfactory",
+    "synonyms": ["improve", "enhance", "alleviate"],
+    "roots": [
+      { "root": "melior", "meaning": "更好", "relatedWords": [] }
+    ],
+    "example": "Steps were taken to ameliorate the hardship.",
+    "exampleCn": "已采取措施改善困境。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0026",
+    "word": "salient",
+    "phonetic": "/ˈseɪliənt/",
+    "partOfSpeech": "adj.",
+    "meaning": "显著的；突出的",
+    "enDef": "most noticeable or important",
+    "synonyms": ["prominent", "striking", "notable"],
+    "example": "The salient points are summarized at the end.",
+    "exampleCn": "重点在末尾做了归纳。",
+    "tags": ["GRE", "写作"]
+  },
+  {
+    "id": "w0027",
+    "word": "laconic",
+    "phonetic": "/ləˈkɒnɪk/",
+    "partOfSpeech": "adj.",
+    "meaning": "言简意赅的；简洁的",
+    "enDef": "using very few words",
+    "synonyms": ["concise", "brief", "terse"],
+    "example": "His laconic reply surprised everyone.",
+    "exampleCn": "他言简意赅的回答让所有人都感到意外。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0028",
+    "word": "obfuscate",
+    "phonetic": "/ˈɒbfəskeɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "使模糊；使困惑",
+    "enDef": "render obscure, unclear, or unintelligible",
+    "synonyms": ["obscure", "confuse", "muddle"],
+    "roots": [
+      { "root": "fusc-", "meaning": "暗色", "relatedWords": ["fuscous"] }
+    ],
+    "example": "They were accused of trying to obfuscate the facts.",
+    "exampleCn": "他们被指控试图混淆事实。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0029",
+    "word": "scrutinize",
+    "phonetic": "/ˈskruːtɪnaɪz/",
+    "partOfSpeech": "v.",
+    "meaning": "仔细检查；详审",
+    "enDef": "examine or inspect closely and thoroughly",
+    "synonyms": ["examine", "inspect", "study"],
+    "roots": [
+      { "root": "scrut", "meaning": "搜索 / 检查", "relatedWords": ["scrutiny"] }
+    ],
+    "example": "The committee scrutinized every line of the report.",
+    "exampleCn": "委员会仔细审阅了报告的每一行。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0030",
+    "word": "pristine",
+    "phonetic": "/ˈprɪstiːn/",
+    "partOfSpeech": "adj.",
+    "meaning": "原始的；崭新的",
+    "enDef": "in its original condition; unspoiled; clean and fresh as if new",
+    "synonyms": ["original", "untouched", "immaculate"],
+    "roots": [
+      { "root": "prist-", "meaning": "先前", "relatedWords": [] }
+    ],
+    "example": "The manuscript was preserved in pristine condition.",
+    "exampleCn": "这份手稿保存完好，宛如新制。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0031",
+    "word": "mitigate",
+    "phonetic": "/ˈmɪtɪɡeɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "减轻；缓解",
+    "enDef": "make something less severe, serious, or painful",
+    "synonyms": ["alleviate", "reduce", "diminish"],
+    "roots": [
+      { "root": "mit-", "meaning": "柔 / 弱", "relatedWords": ["mitigate"] }
+    ],
+    "example": "Medication can mitigate the symptoms.",
+    "exampleCn": "药物可以缓解症状。",
+    "tags": ["CET-6", "医学"]
+  },
+  {
+    "id": "w0032",
+    "word": "acquiesce",
+    "phonetic": "/ˌækwiˈes/",
+    "partOfSpeech": "v.",
+    "meaning": "默许；勉强同意",
+    "enDef": "accept something reluctantly but without protest",
+    "synonyms": ["consent", "accept", "agree"],
+    "roots": [
+      { "root": "quiesc", "meaning": "安静", "relatedWords": ["quiescent"] }
+    ],
+    "example": "He acquiesced to their demands without further argument.",
+    "exampleCn": "他默许多了他们的要求，不再争辩。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0033",
+    "word": "articulate",
+    "phonetic": "/ɑːˈtɪkjʊlət/",
+    "partOfSpeech": "adj./v.",
+    "meaning": "表达清晰的；明确表达",
+    "enDef": "having or showing the ability to speak fluently and coherently",
+    "synonyms": ["eloquent", "fluent", "clear"],
+    "example": "She articulated her objections with great clarity.",
+    "exampleCn": "她非常清晰地表达了自己的反对意见。",
+    "tags": ["CET-6"]
+  },
+  {
+    "id": "w0034",
+    "word": "pragmatic",
+    "phonetic": "/præɡˈmætɪk/",
+    "partOfSpeech": "adj.",
+    "meaning": "务实的；实用的",
+    "enDef": "dealing with things sensibly and realistically",
+    "synonyms": ["practical", "realistic", "sensible"],
+    "roots": [
+      { "root": "pragma", "meaning": "行动 / 事务", "relatedWords": ["pragmatism"] }
+    ],
+    "example": "They took a pragmatic approach to the crisis.",
+    "exampleCn": "他们对危机采取了务实的态度。",
+    "tags": ["CET-6", "商务"]
+  },
+  {
+    "id": "w0035",
+    "word": "surreptitious",
+    "phonetic": "/ˌsʌrəpˈtɪʃəs/",
+    "partOfSpeech": "adj.",
+    "meaning": "秘密的；偷偷摸摸的",
+    "enDef": "kept secret, especially because it would not be approved of",
+    "synonyms": ["secret", "clandestine", "stealthy"],
+    "example": "She cast a surreptitious glance at her watch.",
+    "exampleCn": "她偷偷瞥了一眼手表。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0036",
+    "word": "discrepancy",
+    "phonetic": "/dɪsˈkrepənsi/",
+    "partOfSpeech": "n.",
+    "meaning": "差异；不一致",
+    "enDef": "an illogical or surprising lack of compatibility or similarity between two or more facts",
+    "synonyms": ["difference", "inconsistency", "disparity"],
+    "roots": [
+      { "root": "crep-", "meaning": "声响 / 裂缝", "relatedWords": ["discrepant"] }
+    ],
+    "example": "There was a discrepancy between the two reports.",
+    "exampleCn": "两份报告之间存在不一致。",
+    "tags": ["CET-6", "学术"]
+  },
+  {
+    "id": "w0037",
+    "word": "auspicious",
+    "phonetic": "/ɒˈspɪʃəs/",
+    "partOfSpeech": "adj.",
+    "meaning": "吉利的；有前景的",
+    "enDef": "conducive to success; favorable",
+    "synonyms": ["favorable", "promising", "lucky"],
+    "roots": [
+      { "root": "ausp-", "meaning": "预兆", "relatedWords": ["auspice"] }
+    ],
+    "example": "It was an auspicious start to the year.",
+    "exampleCn": "这是一年的吉祥开端。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0038",
+    "word": "recalcitrant",
+    "phonetic": "/rɪˈkælsɪtrənt/",
+    "partOfSpeech": "adj.",
+    "meaning": "桀骜不驯的；顽抗的",
+    "enDef": "having an obstinately uncooperative attitude",
+    "synonyms": ["unruly", "defiant", "stubborn"],
+    "example": "The recalcitrant student refused to follow instructions.",
+    "exampleCn": "这位桀骜不驯的学生拒绝听从指示。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0039",
+    "word": "proponent",
+    "phonetic": "/prəˈpəʊnənt/",
+    "partOfSpeech": "n.",
+    "meaning": "支持者；倡导者",
+    "enDef": "a person who advocates or supports something",
+    "synonyms": ["advocate", "supporter", "champion"],
+    "roots": [
+      { "root": "pon/pound", "meaning": "放置", "relatedWords": ["propose", "component"] }
+    ],
+    "example": "She was a proponent of the new teaching method.",
+    "exampleCn": "她是新教学法的支持者。",
+    "tags": ["CET-6"]
+  },
+  {
+    "id": "w0040",
+    "word": "ambivalent",
+    "phonetic": "/æmˈbɪvələnt/",
+    "partOfSpeech": "adj.",
+    "meaning": "矛盾的；摇摆不定的",
+    "enDef": "having mixed feelings or contradictory ideas about something",
+    "synonyms": ["conflicted", "uncertain", "torn"],
+    "roots": [
+      { "root": "ambi-", "meaning": "两边", "relatedWords": ["ambiguous"] },
+      { "root": "val-", "meaning": "强 / 价值", "relatedWords": ["valid"] }
+    ],
+    "example": "He remained ambivalent about the offer.",
+    "exampleCn": "他对这份邀约仍然举棋不定。",
+    "tags": ["GRE", "心理学"]
+  },
+  {
+    "id": "w0041",
+    "word": "pragmatism",
+    "phonetic": "/ˈpræɡmətɪzəm/",
+    "partOfSpeech": "n.",
+    "meaning": "实用主义",
+    "enDef": "an approach that evaluates theories or beliefs in terms of the success of their practical application",
+    "synonyms": ["practicality", "realism"],
+    "example": "Pragmatism guided most of her decisions.",
+    "exampleCn": "实用主义指导了她的大多数决策。",
+    "tags": ["GRE", "哲学"]
+  },
+  {
+    "id": "w0042",
+    "word": "commensurate",
+    "phonetic": "/kəˈmenʃərət/",
+    "partOfSpeech": "adj.",
+    "meaning": "相称的；成比例的",
+    "enDef": "corresponding in size or degree; in proportion",
+    "synonyms": ["proportionate", "commensurable", "appropriate"],
+    "roots": [
+      { "root": "mens", "meaning": "测量", "relatedWords": ["measure"] }
+    ],
+    "example": "Salary will be commensurate with experience.",
+    "exampleCn": "薪酬将与经验相称。",
+    "tags": ["GRE", "商务"]
+  },
+  {
+    "id": "w0043",
+    "word": "anachronism",
+    "phonetic": "/əˈnækrənɪzəm/",
+    "partOfSpeech": "n.",
+    "meaning": "时代错误；过时事物",
+    "enDef": "something that is out of place in time, especially something old-fashioned in a modern setting",
+    "synonyms": ["misplacement", "outdated thing"],
+    "roots": [
+      { "root": "chron-", "meaning": "时间", "relatedWords": ["chronicle", "chronic"] },
+      { "root": "ana-", "meaning": "逆 / 再", "relatedWords": ["anomaly"] }
+    ],
+    "example": "In the digital world, this rule feels like an anachronism.",
+    "exampleCn": "在数字世界中，这条规则显得过时。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0044",
+    "word": "veracity",
+    "phonetic": "/vəˈræsəti/",
+    "partOfSpeech": "n.",
+    "meaning": "真实性；诚实",
+    "enDef": "conformity to facts; accuracy; truthfulness",
+    "synonyms": ["truthfulness", "accuracy", "honesty"],
+    "roots": [
+      { "root": "ver-", "meaning": "真实", "relatedWords": ["verify", "veritable"] }
+    ],
+    "example": "We must question the veracity of the data.",
+    "exampleCn": "我们必须对数据的真实性提出质疑。",
+    "tags": ["GRE", "学术"]
+  },
+  {
+    "id": "w0045",
+    "word": "exacerbate",
+    "phonetic": "/ɪɡˈzæsəbeɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "使恶化；使加重",
+    "enDef": "make a problem, bad situation, or negative feeling worse",
+    "synonyms": ["worsen", "aggravate", "intensify"],
+    "roots": [
+      { "root": "acer", "meaning": "尖锐", "relatedWords": ["acerbic"] }
+    ],
+    "example": "Delay will only exacerbate the problem.",
+    "exampleCn": "拖延只会使问题恶化。",
+    "tags": ["GRE", "医学"]
+  },
+  {
+    "id": "w0046",
+    "word": "epitome",
+    "phonetic": "/ɪˈpɪtəmi/",
+    "partOfSpeech": "n.",
+    "meaning": "典型；缩影",
+    "enDef": "a perfect example of a particular quality or type",
+    "synonyms": ["embodiment", "essence", "archetype"],
+    "roots": [
+      { "root": "epi-", "meaning": "在……之上", "relatedWords": ["epidemic"] },
+      { "root": "tom", "meaning": "切", "relatedWords": ["anatomy"] }
+    ],
+    "example": "She is the epitome of academic discipline.",
+    "exampleCn": "她是学术自律的典型代表。",
+    "tags": ["GRE"]
+  },
+  {
+    "id": "w0047",
+    "word": "stipulate",
+    "phonetic": "/ˈstɪpjʊleɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "规定；明确要求",
+    "enDef": "demand or specify a requirement, typically as part of an agreement",
+    "synonyms": ["specify", "require", "prescribe"],
+    "example": "The contract stipulates a 30-day notice period.",
+    "exampleCn": "合同规定了三十天的通知期。",
+    "tags": ["GRE", "法学"]
+  },
+  {
+    "id": "w0048",
+    "word": "expedite",
+    "phonetic": "/ˈekspɪdaɪt/",
+    "partOfSpeech": "v.",
+    "meaning": "加快；促进",
+    "enDef": "make an action or process happen sooner or be accomplished more quickly",
+    "synonyms": ["speed up", "accelerate", "hasten"],
+    "roots": [
+      { "root": "ped-", "meaning": "脚", "relatedWords": ["pedal", "expedition"] }
+    ],
+    "example": "Please expedite the processing of this application.",
+    "exampleCn": "请加快这份申请的处理。",
+    "tags": ["GRE", "商务"]
+  },
+  {
+    "id": "w0049",
+    "word": "empirical",
+    "phonetic": "/ɪmˈpɪrɪkl/",
+    "partOfSpeech": "adj.",
+    "meaning": "经验的；实证的",
+    "enDef": "based on observation or experience rather than theory or pure logic",
+    "synonyms": ["observational", "experimental", "fact-based"],
+    "roots": [
+      { "root": "peri-", "meaning": "尝试", "relatedWords": ["peril"] }
+    ],
+    "example": "The findings were supported by empirical evidence.",
+    "exampleCn": "这些发现得到了实证证据的支持。",
+    "tags": ["学术", "GRE"]
+  },
+  {
+    "id": "w0050",
+    "word": "assiduous",
+    "phonetic": "/əˈsɪdjuəs/",
+    "partOfSpeech": "adj.",
+    "meaning": "勤勉的；持之以恒的",
+    "enDef": "showing great care and perseverance",
+    "synonyms": ["diligent", "persistent", "attentive"],
+    "roots": [
+      { "root": "sed", "meaning": "坐", "relatedWords": ["sedentary"] }
+    ],
+    "example": "Her assiduous research finally yielded results.",
+    "exampleCn": "她持之以恒的研究终于取得了成果。",
+    "tags": ["GRE"]
+  }
+]
