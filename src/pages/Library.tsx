@@ -27,6 +27,20 @@ const DEMO_JSON = `[
   }
 ]`;
 
+// 内置教材词汇数据
+const TEXTBOOK_DATA: Record<string, { name: string; url: string }> = {
+  "pep-junior-7": { name: "人教版PEP · 初中七年级上", url: "/data/vocab-pep-junior-7.json" },
+  "pep-primary-3": { name: "人教版PEP · 小学三年级上", url: "/data/vocab-pep-primary-3.json" },
+  "bs-primary-3": { name: "北师大版 · 小学三年级上下", url: "/data/vocab-bs-primary-3.json" },
+  "wy-primary-1": { name: "外研版 · 小学一年级上", url: "/data/vocab-wy-primary-1.json" },
+};
+
+async function loadTextbookData(url: string): Promise<Word[]> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Failed to load");
+  return res.json();
+}
+
 export function Library() {
   const words = useVocabStore((s) => s.words);
   const progressMap = useVocabStore((s) => s.progressMap);
@@ -57,12 +71,28 @@ export function Library() {
     });
   }, [words, search, selectedTag]);
 
+  const [importingTextbook, setImportingTextbook] = useState<string | null>(null);
+
   const importFromJson = () => {
     try {
       const parsed = JSON.parse(DEMO_JSON) as Word[];
       importWords(parsed);
     } catch {
       // ignore
+    }
+  };
+
+  const handleImportTextbook = async (key: string) => {
+    const data = TEXTBOOK_DATA[key];
+    if (!data) return;
+    setImportingTextbook(key);
+    try {
+      const parsed = await loadTextbookData(data.url);
+      importWords(parsed);
+    } catch {
+      // ignore
+    } finally {
+      setImportingTextbook(null);
     }
   };
 
@@ -115,6 +145,24 @@ export function Library() {
                 }}
               />
             </label>
+            <details className="relative">
+              <summary className="btn-outline cursor-pointer list-none">
+                {importingTextbook ? "导入中…" : "导入教材词"}
+              </summary>
+              <div className="absolute right-0 top-full mt-1 z-10 w-56 rounded-[8px] border border-paper-200 dark:border-white/10 bg-white dark:bg-night-card py-1 shadow-lg">
+                {Object.entries(TEXTBOOK_DATA).map(([key, data]) => (
+                  <button
+                    key={key}
+                    type="button"
+                    className="w-full px-4 py-2 text-left text-sm hover:bg-paper-100 dark:hover:bg-white/10"
+                    onClick={() => handleImportTextbook(key)}
+                    disabled={!!importingTextbook}
+                  >
+                    {data.name}
+                  </button>
+                ))}
+              </div>
+            </details>
           </div>
         </header>
 
