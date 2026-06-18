@@ -48,6 +48,7 @@ export function Review() {
   const [answered, setAnswered] = useState<null | { ok: boolean; score: number }>(null);
   const [timerTick, setTimerTick] = useState(0);
   const [listenReady, setListenReady] = useState(false);
+  const [minimal, setMinimal] = useState(true);
 
   const current = queue[index];
   const flashSecs = settings.flashCardSecs;
@@ -122,6 +123,15 @@ export function Review() {
               {index + 1} / {queue.length}
             </span>
             <span className="chip">当前：{current.mode}</span>
+            <label className="ml-2 inline-flex items-center gap-2 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={minimal}
+                onChange={(e) => setMinimal(e.target.checked)}
+                className="h-4 w-4 accent-moss"
+              />
+              <span>极简模式（隐藏右侧小卡）</span>
+            </label>
           </div>
         </header>
 
@@ -185,37 +195,39 @@ export function Review() {
             )}
           </div>
 
-          <aside className="space-y-4">
-            <div className="paper-card p-4">
-              <h3 className="font-display text-ink dark:text-night-text text-base">心流计时</h3>
-              <div className="mt-3">
-                <FlowTimer key={timerTick + "-" + index} seconds={flashSecs} onExpire={() => handleAnswer(false, flashSecs * 1000)} />
+          {!minimal && (
+            <aside className="space-y-4">
+              <div className="paper-card p-4">
+                <h3 className="font-display text-ink dark:text-night-text text-base">心流计时</h3>
+                <div className="mt-3">
+                  <FlowTimer key={timerTick + "-" + index} seconds={flashSecs} onExpire={() => handleAnswer(false, flashSecs * 1000)} />
+                </div>
+                <p className="mt-3 text-xs text-ink-mute dark:text-night-text/60">
+                  到时自动判错并计入 lapses，模拟「提取失败」的学习效果。
+                </p>
               </div>
-              <p className="mt-3 text-xs text-ink-mute dark:text-night-text/60">
-                到时自动判错并计入 lapses，模拟「提取失败」的学习效果。
-              </p>
-            </div>
 
-            <section className="paper-card p-4">
-              <h3 className="font-display text-ink dark:text-night-text text-base">单词小卡</h3>
-              <div className="mt-2">
-                <p className="font-display text-xl">{current.word.word}</p>
-                <p className="text-sm text-ink-mute dark:text-night-text/60">
-                  <span className="font-mono">{current.word.phonetic}</span> · {current.word.partOfSpeech}
-                </p>
-                <p className="mt-2 text-[15px] text-ink-soft dark:text-night-text/80">
-                  <span className="text-ink-mute dark:text-night-text/50">英英：</span>{current.word.enDef}
-                </p>
-                {current.word.roots && current.word.roots.length > 0 && (
-                  <ul className="mt-2 text-sm text-ink-soft dark:text-night-text/80 space-y-1">
-                    {current.word.roots.map((r) => (
-                      <li key={r.root}><span className="text-moss font-display">{r.root}</span> — {r.meaning}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </section>
-          </aside>
+              <section className="paper-card p-4">
+                <h3 className="font-display text-ink dark:text-night-text text-base">单词小卡</h3>
+                <div className="mt-2">
+                  <p className="font-display text-xl">{current.word.word}</p>
+                  <p className="text-sm text-ink-mute dark:text-night-text/60">
+                    <span className="font-mono">{current.word.phonetic}</span> · {current.word.partOfSpeech}
+                  </p>
+                  <p className="mt-2 text-[15px] text-ink-soft dark:text-night-text/80">
+                    <span className="text-ink-mute dark:text-night-text/50">英英：</span>{current.word.enDef}
+                  </p>
+                  {current.word.roots && current.word.roots.length > 0 && (
+                    <ul className="mt-2 text-sm text-ink-soft dark:text-night-text/80 space-y-1">
+                      {current.word.roots.map((r) => (
+                        <li key={r.root}><span className="text-moss font-display">{r.root}</span> — {r.meaning}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </section>
+            </aside>
+          )}
         </div>
       </main>
     </div>

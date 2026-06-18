@@ -3,29 +3,7 @@ import { NavBar } from "@/components/NavBar";
 import { EmptyState } from "@/components/EmptyState";
 import { useVocabStore } from "@/store/vocabStore";
 import type { Word, WordProgress } from "@/types";
-
-const DEMO_JSON = `[
-  {
-    "id": "demo-1",
-    "word": "ephemeral",
-    "phonetic": "/ɪˈfemərəl/",
-    "partOfSpeech": "adj.",
-    "meaning": "短暂的；瞬息的",
-    "enDef": "lasting for a very short time",
-    "example": "The beauty of autumn leaves is ephemeral.",
-    "tags": ["GRE"]
-  },
-  {
-    "id": "demo-2",
-    "word": "ubiquitous",
-    "phonetic": "/juːˈbɪkwɪtəs/",
-    "partOfSpeech": "adj.",
-    "meaning": "无处不在的",
-    "enDef": "present, appearing, or found everywhere",
-    "example": "Smartphones are ubiquitous in modern life.",
-    "tags": ["GRE"]
-  }
-]`;
+import builtInWords from "@/data/words.json";
 
 export function Library() {
   const words = useVocabStore((s) => s.words);
@@ -36,10 +14,12 @@ export function Library() {
 
   const [search, setSearch] = useState("");
   const [selectedTag, setSelectedTag] = useState<string>(settings.activeLibraryTag);
+  const [importToast, setImportToast] = useState<string | null>(null);
 
   const allTags = useMemo(() => {
     const s = new Set<string>(["全部"]);
     words.forEach((w) => w.tags?.forEach((t) => s.add(t)));
+    (builtInWords as Word[]).forEach((w) => w.tags?.forEach((t) => s.add(t)));
     return Array.from(s);
   }, [words]);
 
@@ -59,8 +39,12 @@ export function Library() {
 
   const importFromJson = () => {
     try {
-      const parsed = JSON.parse(DEMO_JSON) as Word[];
+      const parsed = builtInWords as Word[];
+      const beforeCount = words.length;
       importWords(parsed);
+      const added = Math.max(0, parsed.length - Math.max(0, beforeCount));
+      setImportToast(`已载入 ${parsed.length} 个词（新增约 ${added > 0 ? added : "已存在"}）`);
+      window.setTimeout(() => setImportToast(null), 3500);
     } catch {
       // ignore
     }
@@ -77,7 +61,10 @@ export function Library() {
               {words.length} 个词 · 筛选：
               <select
                 value={selectedTag}
-                onChange={(e) => { setSelectedTag(e.target.value); updateSettings({ activeLibraryTag: e.target.value }); }}
+                onChange={(e) => {
+                  setSelectedTag(e.target.value);
+                  updateSettings({ activeLibraryTag: e.target.value });
+                }}
                 className="ml-2 rounded-[8px] border border-paper-200 dark:border-white/10 bg-white dark:bg-night-card px-2 py-1 text-sm"
               >
                 {allTags.map((t) => (
@@ -94,7 +81,9 @@ export function Library() {
               placeholder="按英文 / 中文释义搜索…"
               className="field max-w-xs"
             />
-            <button type="button" className="btn-outline" onClick={importFromJson}>载入示例词</button>
+            <button type="button" className="btn-primary" onClick={importFromJson}>
+              一键载入内置高频词（{builtInWords.length}）
+            </button>
             <label className="btn-outline cursor-pointer">
               导入 JSON
               <input
@@ -118,11 +107,22 @@ export function Library() {
           </div>
         </header>
 
+        {importToast && (
+          <div className="mt-4 rounded-[10px] border border-moss/30 bg-moss/5 px-4 py-3 text-sm text-moss">
+            {importToast}
+          </div>
+        )}
+
         {filtered.length === 0 ? (
           <div className="mt-6">
-            <EmptyState title="没有找到匹配的词" hint="尝试清空搜索或更改标签。" actionLabel="载入示例" actionHref="#" />
+            <EmptyState
+              title="没有找到匹配的词"
+              hint="尝试清空搜索或点击上方「一键载入内置高频词」。"
+              actionLabel="一键载入"
+              actionHref="#"
+            />
             <div className="mt-4 flex justify-center">
-              <button className="btn-primary" onClick={importFromJson}>载入示例</button>
+              <button className="btn-primary" onClick={importFromJson}>一键载入内置高频词</button>
             </div>
           </div>
         ) : (

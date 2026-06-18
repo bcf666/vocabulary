@@ -7,6 +7,7 @@ import { StageReveal } from "@/components/StageReveal";
 import { useVocabStore } from "@/store/vocabStore";
 import type { Word, WordProgress } from "@/types";
 import { Link } from "react-router-dom";
+import { Zap, ChevronRight } from "lucide-react";
 
 type Step = "card" | "jol" | "doodle" | "done";
 
@@ -30,10 +31,8 @@ export function Learn() {
   const [, setDoodleSeed] = useState(0);
 
   const current: Word | undefined = candidates[idx];
-  const [showStage, setShowStage] = useState(false);
 
   useEffect(() => {
-    // reset when moving to new word
     setStep("card");
     setJol("medium");
     setDoodle(undefined);
@@ -47,8 +46,11 @@ export function Learn() {
         <main className="container py-10">
           <h1 className="font-display text-2xl text-ink dark:text-night-text">学新词</h1>
           <p className="mt-2 text-sm text-ink-mute dark:text-night-text/60">
-            词库还没有数据，先去 <Link to="/library" className="text-moss underline">词库</Link> 导入或使用内置演示词表。
+            词库还没有数据，先去 <Link to="/library" className="text-moss underline">词库</Link> 导入或使用内置高频词。
           </p>
+          <div className="mt-6">
+            <Link to="/library" className="btn-primary">去词库</Link>
+          </div>
         </main>
       </div>
     );
@@ -76,11 +78,14 @@ export function Learn() {
     ensureProgress(current.id, jol);
     if (doodle) storeSetDoodle(current.id, doodle);
     recordSession("learn");
-    setShowStage(true);
-    window.setTimeout(() => {
-      setShowStage(false);
-      setIdx((i) => i + 1);
-    }, 1200);
+    setIdx((i) => i + 1);
+  };
+
+  const quickFinish = () => {
+    // 跳过精细编码：直接用 medium（或用户设置的默认）+ 无涂鸦
+    ensureProgress(current.id, "medium");
+    recordSession("learn");
+    setIdx((i) => i + 1);
   };
 
   return (
@@ -91,43 +96,34 @@ export function Learn() {
           <div>
             <h1 className="font-display text-2xl text-ink dark:text-night-text">学新词</h1>
             <p className="text-sm text-ink-mute dark:text-night-text/60">
-              按：DeepCard → JOL → Doodle；中文释义默认隐藏（精细加工）
+              按：DeepCard → JOL → Doodle · 共 {candidates.length} 词待学
             </p>
           </div>
-          <div className="text-sm text-ink-mute dark:text-night-text/60">
-            进度 <span className="font-mono text-ink dark:text-night-text">{idx + 1}</span> / {Math.max(candidates.length, 0)}
+          <div className="flex flex-wrap items-center gap-2 text-sm text-ink-mute dark:text-night-text/60">
+            <span className="font-mono text-ink dark:text-night-text">{idx + 1}</span> / {candidates.length}
+            <button type="button" onClick={quickFinish} className="btn-outline ml-2">
+              <Zap size={16} /> 跳过精细编码（默认难度）
+            </button>
           </div>
         </header>
 
         <div className="mt-6 grid gap-5 lg:grid-cols-[1.3fr_1fr]">
           <section className="space-y-4">
-            {showStage ? (
-              <StageReveal
-                progress={{
-                  wordId: current.id,
-                  initialDifficulty: jol,
-                  status: "acquaintance",
-                  reps: 1,
-                  lapses: 0,
-                  easeFactor: 2.5,
-                  intervalDays: 1,
-                  lastReviewedAt: Date.now(),
-                  nextReviewAt: Date.now() + 86_400_000,
-                  history: [],
-                }}
-              />
-            ) : (
-              <DeepCard
-                key={current.id + (settings.defaultCnHidden ? "-hidden" : "")}
-                word={current}
-                nextLabel={step === "card" ? "进入 JOL 预估" : step === "jol" ? "进入 Doodle" : "提交，进入间隔队列"}
-                onNext={() => {
-                  if (step === "card") setStep("jol");
-                  else if (step === "jol") setStep("doodle");
-                  else confirmLearn();
-                }}
-              />
-            )}
+            <DeepCard
+              key={current.id + (settings.defaultCnHidden ? "-hidden" : "")}
+              word={current}
+              nextLabel={step === "card" ? "进入 JOL 预估" : step === "jol" ? "进入 Doodle" : "提交，进入间隔队列"}
+              onNext={() => {
+                if (step === "card") setStep("jol");
+                else if (step === "jol") setStep("doodle");
+                else confirmLearn();
+              }}
+            />
+            <div className="flex justify-end">
+              <button type="button" className="btn-ghost" onClick={quickFinish}>
+                <Zap size={16} /> 跳过 · 使用默认难度 & 无涂鸦 <ChevronRight size={14} />
+              </button>
+            </div>
           </section>
 
           <section className="space-y-4">
@@ -146,7 +142,7 @@ export function Learn() {
                 <li>先听发音；阅读英英释义与词根拆解（不揭示中文）</li>
                 <li>尝试用 <span className="text-moss">自己的话</span> 说一次释义，然后点击揭示中文</li>
                 <li>给难度 JOL；简单涂鸦一个「助记」意象（生成效应）</li>
-                <li>提交 → 单词进入间隔队列</li>
+                <li>或者直接 <span className="text-moss">跳过精细编码</span> 快速完成</li>
               </ol>
             </div>
           </section>
